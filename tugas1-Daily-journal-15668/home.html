@@ -1,85 +1,434 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daily Journal</title>
-  <style>
-    .container {
-      margin: 0px;
-      display: flex;
-      justify-content: space-between;
-      padding-right: 2%;
-      padding-left: 2%;
-    }
-
-    .judul {
-      text-align: center;
-    }
-  </style>
+  <meta name="description" content="Daily Journal — Buku catatan online milik Muhammad Najib Finanda, mahasiswa Teknik Informatika, Universitas Dian Nuswantoro.">
+  <title>Home — Daily Journal · Muhammad Najib Finanda</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314489b'/%3E%3Cpath d='M9 8.5h10a3.5 3.5 0 0 1 3.5 3.5v11.5a1 1 0 0 1-1.5.86A6.5 6.5 0 0 0 17.5 23H9V8.5z' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M13 13h6M13 17h4' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('dj_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Daily Journal</h1>
-  <p>
-    Ini adalah buku catatan online milik <b>Muhammad Najib Finanda</b> yang sekarang sedang menempuh pendidikan
-    untuk mendapatkan gelar sarjana pada program studi Teknik Informatika, Universitas Dian Nuswantoro
-  </p>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
 
-  <hr style="height: 3px; background-color: black; border: none;">
+  <header class="site-header">
+    <div class="wrapper nav-bar">
+      <a class="brand" href="home.html" aria-label="Beranda Daily Journal">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <line x1="8.5" y1="7" x2="15.5" y2="7"></line>
+            <line x1="8.5" y1="11" x2="13.5" y2="11"></line>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Daily Journal</span>
+          <span class="brand-sub">Muhammad Najib Finanda</span>
+        </span>
+      </a>
 
-  <ul>
-    <li><a href="home.html">Home</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="article.html">Article</a></li>
-  </ul>
+      <nav class="nav-right" aria-label="Navigasi utama">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="home.html" aria-current="page">Home</a></li>
+          <li><a href="article.html">Article</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
 
-  <hr style="height: 3px; background-color: black; border: none;">
+        <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Ganti tema tampilan" title="Ganti tema">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
 
-  <section class="container">
-    <div>
-      <h2 class="judul">- Article -</h2>
-      <div>
-        <p style="margin: 0;"><b>1. Senin, 11 September 2023</b></p>
-        <p style="margin: 0; padding-left: 1%;">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam,
-          minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum
-          fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate,
-          explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.
-        </p>
+        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
 
-        <p style="margin: 0;"><b>2. Selasa, 12 September 2023</b></p>
-        <p style="margin: 0; padding-left: 1%;">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam,
-          minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum
-          fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate,
-          explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.
-        </p>
+  <main id="main-content">
+    <!-- Hero Masthead -->
+    <section class="hero">
+      <div class="wrapper hero-grid">
+        <div>
+          <span class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Buku Catatan Online · Teknik Informatika
+          </span>
+          <h1 class="hero-title">Daily <em>Journal</em></h1>
+          <p class="hero-lead">
+            Ini adalah buku catatan online milik <strong>Muhammad Najib Finanda</strong> yang sekarang sedang menempuh pendidikan untuk mendapatkan gelar sarjana pada program studi Teknik Informatika, Universitas Dian Nuswantoro.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="article.html">
+              <span>Baca Semua Artikel</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="gallery.html">Lihat Galeri Kampus</a>
+          </div>
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+              Universitas Dian Nuswantoro (UDINUS)
+            </span>
+            <span class="hero-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Semarang, Jawa Tengah
+            </span>
+          </div>
+        </div>
 
-        <p style="margin: 0;"><b>3. Rabu, 13 September 2023</b></p>
-        <p style="margin: 0; padding-left: 1%;">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam,
-          minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum
-          fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate,
-          explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.
-        </p>
+        <aside class="author-card" aria-label="Profil singkat penulis">
+          <div class="author-header">
+            <div class="author-avatar" aria-hidden="true">MN</div>
+            <div>
+              <h2 class="author-name">Muhammad Najib Finanda</h2>
+              <p class="author-role">S1 Teknik Informatika · UDINUS</p>
+            </div>
+          </div>
 
-        <p><a href="article.html" style="padding-left: 1%;">Selengkapnya...</a></p>
+          <div class="author-campus-frame">
+            <img src="udinus1.jpg" alt="Gedung utama Universitas Dian Nuswantoro dengan fasad kaca biru" loading="eager">
+            <div class="author-campus-caption">
+              <span>Kampus Universitas Dian Nuswantoro</span>
+              <span class="tag">Semarang</span>
+            </div>
+          </div>
+
+          <div class="author-stats">
+            <div>
+              <span class="stat-value" data-total-notes>6</span>
+              <span class="stat-label">Catatan</span>
+            </div>
+            <div>
+              <span class="stat-value">3</span>
+              <span class="stat-label">Foto Kampus</span>
+            </div>
+            <div>
+              <span class="stat-value">1</span>
+              <span class="stat-label">Video</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <hr class="editorial-rule">
+    </div>
+
+    <!-- Main Two-Column Overview: Article & Gallery -->
+    <section class="section-block">
+      <div class="wrapper home-split">
+        <!-- Left Column: Recent Articles -->
+        <div>
+          <div class="section-heading">
+            <div class="section-title-group">
+              <span class="section-kicker">01</span>
+              <h2 class="section-title">Article</h2>
+            </div>
+            <a class="more-link" href="article.html">
+              Selengkapnya <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="article-list">
+            <article class="article-card reveal">
+              <div class="article-meta">
+                <span class="entry-num">#01</span>
+                <time class="entry-date" datetime="2023-09-11">Senin, 11 September 2023</time>
+                <span class="tag">Perkuliahan</span>
+                <span class="entry-readtime">2 mnt baca</span>
+              </div>
+              <h3 class="article-title">
+                <a href="article.html#artikel-1">Hari Pertama Perkuliahan Semester Baru di Kampus UDINUS</a>
+              </h3>
+              <div class="article-body">
+                <p>
+                  Pekan perkuliahan resmi dimulai pagi ini. Suasana Gedung H terasa ramai oleh mahasiswa yang kembali bertemu setelah libur semester. Setelah perkenalan silabus bersama dosen pengampu, saya menyusun ulang jadwal belajar mingguan agar pembagian waktu antara teori dan praktikum tetap seimbang.
+                </p>
+              </div>
+              <div class="article-footer">
+                <a class="more-link" href="article.html#artikel-1">
+                  Baca catatan lengkap <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="article-card reveal">
+              <div class="article-meta">
+                <span class="entry-num">#02</span>
+                <time class="entry-date" datetime="2023-09-12">Selasa, 12 September 2023</time>
+                <span class="tag">Pemrograman Web</span>
+                <span class="entry-readtime">2 mnt baca</span>
+              </div>
+              <h3 class="article-title">
+                <a href="article.html#artikel-2">Mengenal Struktur Semantik HTML5 pada Pemrograman Berbasis Web</a>
+              </h3>
+              <div class="article-body">
+                <p>
+                  Pada sesi Pemrograman Berbasis Web hari ini, kami mempelajari pentingnya elemen semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, dan <code>&lt;footer&gt;</code>. Ternyata kode yang rapi bukan hanya memudahkan pengembangan, tetapi juga membantu aksesibilitas dan pembacaan mesin pencari.
+                </p>
+              </div>
+              <div class="article-footer">
+                <a class="more-link" href="article.html#artikel-2">
+                  Baca catatan lengkap <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="article-card reveal">
+              <div class="article-meta">
+                <span class="entry-num">#03</span>
+                <time class="entry-date" datetime="2023-09-13">Rabu, 13 September 2023</time>
+                <span class="tag">Kampus</span>
+                <span class="entry-readtime">2 mnt baca</span>
+              </div>
+              <h3 class="article-title">
+                <a href="article.html#artikel-3">Diskusi Kelompok &amp; Merancang Konsep Daily Journal Online</a>
+              </h3>
+              <div class="article-body">
+                <p>
+                  Selepas kelas siang, saya bersama teman-teman berdiskusi di selasar kampus mengenai konsep tugas pertama: membangun buku catatan online pribadi. Kami saling berbagi referensi tata letak halaman artikel dan galeri agar navigasinya sederhana dan nyaman dibaca di berbagai ukuran layar.
+                </p>
+              </div>
+              <div class="article-footer">
+                <a class="more-link" href="article.html#artikel-3">
+                  Baca catatan lengkap <span class="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Right Column: Gallery Preview -->
+        <div>
+          <div class="section-heading">
+            <div class="section-title-group">
+              <span class="section-kicker">02</span>
+              <h2 class="section-title">Gallery</h2>
+            </div>
+            <a class="more-link" href="gallery.html">
+              Selengkapnya <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <div class="gallery-preview-stack">
+            <figure
+              class="photo-card reveal"
+              tabindex="0"
+              role="button"
+              aria-label="Perbesar foto Gedung Universitas Dian Nuswantoro"
+              data-lightbox
+              data-src="udinus1.jpg"
+              data-category="Gedung Kampus"
+              data-title="Gedung Universitas Dian Nuswantoro"
+              data-desc="Tampak depan gedung ikonik UDINUS dengan arsitektur kaca biru modern di Jalan Imam Bonjol, Semarang."
+            >
+              <div class="photo-frame">
+                <img src="udinus1.jpg" alt="Tampak depan gedung Universitas Dian Nuswantoro dengan fasad kaca biru" loading="lazy">
+                <span class="photo-zoom-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </span>
+              </div>
+              <figcaption class="photo-caption">
+                <div class="photo-caption-top">
+                  <h3 class="photo-title">Gedung Utama UDINUS</h3>
+                  <span class="tag">Kampus</span>
+                </div>
+                <p class="photo-desc">Fasad kaca biru modern kampus Universitas Dian Nuswantoro, Semarang.</p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="photo-card reveal"
+              tabindex="0"
+              role="button"
+              aria-label="Perbesar foto Entrepreneur Hub Finance Jawa Tengah"
+              data-lightbox
+              data-src="udinus2.jpg"
+              data-category="Acara"
+              data-title="Entrepreneur Hub Finance Jawa Tengah 2025"
+              data-desc="Dokumentasi penyerahan apresiasi dan foto bersama narasumber pada kegiatan Entrepreneur Hub Finance Jawa Tengah."
+            >
+              <div class="photo-frame">
+                <img src="udinus2.jpg" alt="Foto bersama pembicara dan peserta di panggung acara Entrepreneur Hub Finance Jawa Tengah 2025" loading="lazy">
+                <span class="photo-zoom-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </span>
+              </div>
+              <figcaption class="photo-caption">
+                <div class="photo-caption-top">
+                  <h3 class="photo-title">Entrepreneur Hub Finance</h3>
+                  <span class="tag">Acara</span>
+                </div>
+                <p class="photo-desc">Momen kebersamaan di panggung utama acara kewirausahaan Jawa Tengah.</p>
+              </figcaption>
+            </figure>
+
+            <figure
+              class="photo-card reveal"
+              tabindex="0"
+              role="button"
+              aria-label="Perbesar foto Upacara Bendera di Halaman UDINUS"
+              data-lightbox
+              data-src="udinus3.jpg"
+              data-category="Kegiatan"
+              data-title="Upacara Bendera di Halaman Kampus"
+              data-desc="Pelaksanaan upacara bendera oleh sivitas akademika dan paskibra mahasiswa di halaman gedung UDINUS."
+            >
+              <div class="photo-frame">
+                <img src="udinus3.jpg" alt="Suasana upacara bendera di halaman depan gedung Universitas Dian Nuswantoro" loading="lazy">
+                <span class="photo-zoom-badge" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    <line x1="11" y1="8" x2="11" y2="14"></line>
+                    <line x1="8" y1="11" x2="14" y2="11"></line>
+                  </svg>
+                </span>
+              </div>
+              <figcaption class="photo-caption">
+                <div class="photo-caption-top">
+                  <h3 class="photo-title">Upacara di Halaman Kampus</h3>
+                  <span class="tag">Kegiatan</span>
+                </div>
+                <p class="photo-desc">Pelaksanaan upacara bendera di pelataran gedung utama UDINUS.</p>
+              </figcaption>
+            </figure>
+
+            <div class="gallery-cta-box reveal">
+              <div>
+                <strong>Tersedia juga dokumentasi video</strong>
+                <p>Lihat koleksi foto lengkap dan video kampus di halaman Gallery.</p>
+              </div>
+              <a class="btn btn-secondary" href="gallery.html">Buka Gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="home.html">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-title">Daily Journal</span>
+              <span class="brand-sub">Teknik Informatika · UDINUS</span>
+            </span>
+          </a>
+          <p>
+            Buku catatan online pribadi milik Muhammad Najib Finanda untuk mendokumentasikan perjalanan studi dan aktivitas perkuliahan di Universitas Dian Nuswantoro.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigasi footer">
+          <a href="home.html">Home</a>
+          <a href="article.html">Article</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="https://dinus.ac.id" target="_blank" rel="noopener noreferrer">Website UDINUS ↗</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Muhammad Najib Finanda · Daily Journal.</p>
+        <p>Program Studi Teknik Informatika, Universitas Dian Nuswantoro.</p>
       </div>
     </div>
-
-    <div style="text-align: center;">
-      <h2 class="judul">- Gallery -</h2>
-      <img src="udinus1.jpg" width="200" alt="">
-      <img src="udinus2.jpg" width="200" alt="">
-      <img src="udinus3.jpg" width="200" alt="">
-      <p><a href="gallery.html" style="padding-left: 1%;">Selengkapnya...</a></p>
-    </div>
-  </section>
-
-  <hr style="height: 3px; background-color: black; border: none;">
-
-  <footer>
-    <p>Footer - Copyright 2014</p>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+    <div class="modal-dialog lightbox-dialog">
+      <div class="modal-header">
+        <span class="tag" id="lightbox-category">Dokumentasi</span>
+        <button type="button" class="icon-btn" id="lightbox-close" aria-label="Tutup tampilan foto">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="lightbox-stage">
+          <img id="lightbox-img" src="" alt="">
+        </div>
+        <div class="lightbox-details">
+          <h4 id="lightbox-title"></h4>
+          <p id="lightbox-desc"></p>
+        </div>
+        <div class="lightbox-controls">
+          <button type="button" class="btn btn-secondary" id="lightbox-prev">← Sebelumnya</button>
+          <span class="lightbox-counter" id="lightbox-counter">1 / 3</span>
+          <button type="button" class="btn btn-secondary" id="lightbox-next">Berikutnya →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 </body>
 </html>

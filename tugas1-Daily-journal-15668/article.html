@@ -1,51 +1,425 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    .container{
-            margin: 0px;
-            display: flex;
-            justify-content: space-between;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kumpulan artikel dan catatan harian perkuliahan Muhammad Najib Finanda — Teknik Informatika, Universitas Dian Nuswantoro.">
+  <title>Article — Daily Journal · Muhammad Najib Finanda</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2314489b'/%3E%3Cpath d='M9 8.5h10a3.5 3.5 0 0 1 3.5 3.5v11.5a1 1 0 0 1-1.5.86A6.5 6.5 0 0 0 17.5 23H9V8.5z' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M13 13h6M13 17h4' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,700;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('dj_theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
-        .content{
-            padding-left: 2%;
-            padding-right: 2%;
-        }
-    </style>
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Daily Journal</h1>
-    <p>Ini adalah buku catatan online milik <b>Muhammad Najib Finanda</b> yang sekarang sedang menempuh pendidikan untuk mendapatkan gelar sarjana pada program studi Teknik Informatika, Universitas Dian Nuswantoro</p>
-    <hr style="height: 3px; background-color: black; border: none;">
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="article.html">Article</a></li>
-    </ul>
-    <hr style="height: 3px; background-color: black; border: none;">
-            <div style="justify-items: center;">
-            <h2 class="judul" style="justify-content: center;">- Article -</h2>
-            <div class="content">
-                <p style="margin: 0;"><b>1. Senin, 11 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-                <p style="margin: 0;"><b>2. Selasa, 12 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-                <p style="margin: 0;"><b>3. Rabu, 13 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-                <p style="margin: 0;"><b>4. Kamis, 14 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-                <p style="margin: 0;"><b>5. Jumat, 15 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-                <p style="margin: 0;"><b>6. Sabtu,16 September 2023</b></p>
-                <p style="margin: 0; padding-left: 1%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nobis aperiam illum tenetur aliquam, minima possimus nulla debitis cupiditate, praesentium quaerat eius facilis quia dolor repellendus dolorum fuga saepe deleniti pariatur magni. Nulla ratione accusamus id quo corporis, harum sequi cupiditate, explicabo numquam sunt nam? Blanditiis voluptates praesentium unde beatae.</p>
-            </div>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="wrapper nav-bar">
+      <a class="brand" href="home.html" aria-label="Beranda Daily Journal">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <line x1="8.5" y1="7" x2="15.5" y2="7"></line>
+            <line x1="8.5" y1="11" x2="13.5" y2="11"></line>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">Daily Journal</span>
+          <span class="brand-sub">Muhammad Najib Finanda</span>
+        </span>
+      </a>
+
+      <nav class="nav-right" aria-label="Navigasi utama">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="article.html" aria-current="page">Article</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+
+        <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Ganti tema tampilan" title="Ganti tema">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-links">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="wrapper">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="home.html">Home</a>
+          <span aria-hidden="true">/</span>
+          <span>Article</span>
+        </nav>
+
+        <div class="page-header-row">
+          <div>
+            <h1 class="page-title">Artikel &amp; Catatan Harian</h1>
+            <p class="page-desc">
+              Arsip catatan harian <strong>Muhammad Najib Finanda</strong> selama menempuh studi S1 Teknik Informatika di Universitas Dian Nuswantoro. Cari topik, tandai bacaan favorit, atau tambahkan catatan baru.
+            </p>
+          </div>
+          <button type="button" class="btn btn-primary" id="open-note-modal">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>Tulis Catatan</span>
+          </button>
         </div>
-            <hr style="height: 3px; background-color: black; border: none;">
-        <footer>
-            <p>Footer - Copyright 2014</p>
-        </footer>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <hr class="editorial-rule">
+    </div>
+
+    <section class="section-block">
+      <div class="wrapper">
+        <!-- Search & Category Filter Toolbar -->
+        <div class="toolbar" role="region" aria-label="Filter dan pencarian artikel">
+          <div class="toolbar-top">
+            <div class="search-field">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                type="search"
+                id="article-search"
+                class="search-input"
+                placeholder="Cari catatan berdasarkan judul, tanggal, atau kata kunci..."
+                aria-label="Cari catatan"
+              >
+            </div>
+          </div>
+
+          <div class="filter-pills" role="group" aria-label="Filter kategori catatan">
+            <button type="button" class="pill-btn is-active" data-article-filter="semua">Semua</button>
+            <button type="button" class="pill-btn" data-article-filter="perkuliahan">Perkuliahan</button>
+            <button type="button" class="pill-btn" data-article-filter="pemrograman-web">Pemrograman Web</button>
+            <button type="button" class="pill-btn" data-article-filter="kampus">Kampus</button>
+            <button type="button" class="pill-btn" data-article-filter="refleksi">Refleksi</button>
+            <button type="button" class="pill-btn" data-article-filter="tersimpan">★ Tersimpan</button>
+          </div>
+        </div>
+
+        <div class="results-meta">
+          <span id="article-results-text">Menampilkan 6 dari 6 catatan</span>
+          <span>Total arsip: <strong data-total-notes>6</strong> catatan</span>
+        </div>
+
+        <!-- Article Archive List -->
+        <div class="article-list" id="article-list">
+          <article class="article-card" id="artikel-1" data-category="perkuliahan">
+            <div class="article-meta">
+              <span class="entry-num">#01</span>
+              <time class="entry-date" datetime="2023-09-11">1. Senin, 11 September 2023</time>
+              <span class="tag">Perkuliahan</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Hari Pertama Perkuliahan Semester Baru di Kampus UDINUS</h2>
+            <div class="article-body">
+              <p>
+                Pekan perkuliahan resmi dimulai pagi ini di Universitas Dian Nuswantoro. Suasana Gedung H terasa ramai oleh mahasiswa Teknik Informatika yang kembali bertemu setelah libur semester. Sesi pagi diisi dengan pengenalan kontrak kuliah, rencana pembelajaran semester, serta pembagian proyek kecil yang akan dikerjakan secara bertahap hingga ujian tengah semester.
+              </p>
+              <p>
+                Sepulang dari kelas, saya langsung menyusun ulang jadwal belajar mingguan dan merapikan folder catatan mata kuliah di laptop. Target saya di semester ini sederhana: lebih konsisten mencatat poin penting setiap selesai kelas agar tidak menumpuk menjelang ujian.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Gedung H · Universitas Dian Nuswantoro</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-1" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" id="artikel-2" data-category="pemrograman-web">
+            <div class="article-meta">
+              <span class="entry-num">#02</span>
+              <time class="entry-date" datetime="2023-09-12">2. Selasa, 12 September 2023</time>
+              <span class="tag">Pemrograman Web</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Mengenal Struktur Semantik HTML5 pada Pemrograman Berbasis Web</h2>
+            <div class="article-body">
+              <p>
+                Hari ini mata kuliah Pemrograman Berbasis Web membahas fondasi pembuatan halaman web modern menggunakan HTML5. Kami mempraktikkan langsung penggunaan elemen semantik seperti <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, dan <code>&lt;footer&gt;</code> dibandingkan hanya mengandalkan tag <code>&lt;div&gt;</code> di seluruh dokumen.
+              </p>
+              <p>
+                Ternyata penulisan struktur HTML yang jelas memberikan banyak manfaat sekaligus: kode lebih mudah dirawat, screen reader dapat menavigasi halaman dengan baik, dan tata letak CSS nantinya jauh lebih terorganisasi.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Lab Komputer · Pemrograman Berbasis Web</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-2" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" id="artikel-3" data-category="kampus">
+            <div class="article-meta">
+              <span class="entry-num">#03</span>
+              <time class="entry-date" datetime="2023-09-13">3. Rabu, 13 September 2023</time>
+              <span class="tag">Kampus</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Diskusi Kelompok &amp; Merancang Konsep Daily Journal Online</h2>
+            <div class="article-body">
+              <p>
+                Selepas kelas siang, saya bersama teman-teman sekelas berdiskusi santai di selasar kampus mengenai konsep tugas pembuatan web Daily Journal. Kami memetakan tiga halaman utama yang saling terhubung: Home sebagai ringkasan, Article untuk daftar tulisan harian, dan Gallery untuk menampilkan dokumentasi foto serta video kampus.
+              </p>
+              <p>
+                Dari diskusi tersebut saya menyadari bahwa desain yang nyaman dibaca tidak harus rumit. Hierarki tipografi yang tepat, jarak antar elemen yang lega, dan konsistensi navigasi di setiap halaman sudah sangat menentukan kenyamanan pengunjung.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Selasar Kampus · UDINUS Semarang</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-3" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" id="artikel-4" data-category="perkuliahan">
+            <div class="article-meta">
+              <span class="entry-num">#04</span>
+              <time class="entry-date" datetime="2023-09-14">4. Kamis, 14 September 2023</time>
+              <span class="tag">Perkuliahan</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Memperdalam Logika Algoritma dan Latihan Pemecahan Masalah</h2>
+            <div class="article-body">
+              <p>
+                Kamis diisi dengan latihan soal algoritma yang menantang. Fokus utama materi hari ini adalah menganalisis kompleksitas waktu sederhana serta membandingkan efektivitas beberapa pendekatan perulangan dan struktur data dasar.
+              </p>
+              <p>
+                Mencoba menuliskan alur pemikiran di kertas terlebih dahulu sebelum menyentuh editor kode benar-benar mempercepat proses debugging. Kesalahan kecil seperti kondisi batas (edge case) jadi jauh lebih cepat terdeteksi.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Ruang Kuliah · Teknik Informatika</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-4" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" id="artikel-5" data-category="pemrograman-web">
+            <div class="article-meta">
+              <span class="entry-num">#05</span>
+              <time class="entry-date" datetime="2023-09-15">5. Jumat, 15 September 2023</time>
+              <span class="tag">Pemrograman Web</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Menata Layout Web Responsif Menggunakan CSS Flexbox &amp; Grid</h2>
+            <div class="article-body">
+              <p>
+                Sore ini saya meluangkan waktu khusus untuk bereksperimen dengan CSS Flexbox dan CSS Grid agar tampilan halaman web bisa menyesuaikan diri dengan rapi baik di layar laptop maupun ponsel. Salah satu bagian menariknya adalah mengatur proporsi kolom artikel dan galeri agar tetap seimbang.
+              </p>
+              <p>
+                Selain itu, memisahkan gaya ke dalam satu file <code>style.css</code> eksternal membuat pembaruan warna, tipografi, dan spasi di seluruh halaman jauh lebih cepat serta bebas duplikasi kode.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Belajar Mandiri · Front-End Styling</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-5" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card" id="artikel-6" data-category="refleksi">
+            <div class="article-meta">
+              <span class="entry-num">#06</span>
+              <time class="entry-date" datetime="2023-09-16">6. Sabtu, 16 September 2023</time>
+              <span class="tag">Refleksi</span>
+              <span class="entry-readtime">2 mnt baca</span>
+            </div>
+            <h2 class="article-title">Refleksi Pekan Pertama &amp; Menyusun Target Belajar Berikutnya</h2>
+            <div class="article-body">
+              <p>
+                Akhir pekan menjadi momen yang tepat untuk meninjau kembali apa saja yang sudah dipelajari selama enam hari terakhir. Mulai dari penyusunan struktur HTML semantik, latihan algoritma, hingga merancang tampilan Daily Journal ini — semuanya memberi gambaran nyata bagaimana teori di kelas langsung terpakai dalam praktik.
+              </p>
+              <p>
+                Untuk pekan depan, saya ingin terus melatih keterampilan JavaScript dasar agar website tidak hanya menarik secara visual, tetapi juga interaktif dan benar-benar berguna sebagai buku catatan harian pribadi.
+              </p>
+            </div>
+            <div class="article-footer">
+              <span class="meta-note">Catatan Akhir Pekan · Semarang</span>
+              <div class="article-actions">
+                <button type="button" class="bookmark-btn" data-bookmark="artikel-6" aria-pressed="false">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Simpan</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="article-empty" hidden>
+          <h3>Catatan tidak ditemukan</h3>
+          <p>Belum ada catatan yang cocok dengan pencarian atau filter yang dipilih.</p>
+          <button type="button" class="btn btn-secondary" id="reset-article-filter">Tampilkan Semua Catatan</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="home.html">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </span>
+            <span class="brand-text">
+              <span class="brand-title">Daily Journal</span>
+              <span class="brand-sub">Teknik Informatika · UDINUS</span>
+            </span>
+          </a>
+          <p>
+            Buku catatan online pribadi milik Muhammad Najib Finanda untuk mendokumentasikan perjalanan studi dan aktivitas perkuliahan di Universitas Dian Nuswantoro.
+          </p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Navigasi footer">
+          <a href="home.html">Home</a>
+          <a href="article.html">Article</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="https://dinus.ac.id" target="_blank" rel="noopener noreferrer">Website UDINUS ↗</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Muhammad Najib Finanda · Daily Journal.</p>
+        <p>Program Studi Teknik Informatika, Universitas Dian Nuswantoro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- New Note Composer Modal -->
+  <div class="modal-backdrop" id="note-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="note-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h2 class="modal-title" id="note-modal-title">Tulis Catatan Baru</h2>
+        <button type="button" class="icon-btn" id="close-note-modal" aria-label="Tutup form catatan baru">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="note-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="note-title">Judul Catatan</label>
+            <input type="text" id="note-title" class="form-control" placeholder="Contoh: Praktikum JavaScript DOM di Lab" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="note-date">Tanggal</label>
+              <input type="date" id="note-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="note-category">Kategori</label>
+              <select id="note-category" class="form-control">
+                <option value="perkuliahan">Perkuliahan</option>
+                <option value="pemrograman-web">Pemrograman Web</option>
+                <option value="kampus">Kampus</option>
+                <option value="refleksi">Refleksi</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="note-content">Isi Catatan</label>
+            <textarea id="note-content" class="form-control" placeholder="Tuliskan pengalaman, rangkuman kuliah, atau refleksi hari ini..." required></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-secondary" id="cancel-note-modal">Batal</button>
+            <button type="submit" class="btn btn-primary">Simpan Catatan</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
 </body>
 </html>
