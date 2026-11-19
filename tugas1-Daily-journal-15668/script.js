@@ -174,7 +174,7 @@
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -24px 0px' }
+      { threshold: 0.01, rootMargin: '0px 0px 80px 0px' }
     );
 
     els.forEach((el) => observer.observe(el));
@@ -237,12 +237,14 @@
     }
 
     function closeLightbox() {
+      if (lastFocused && typeof lastFocused.focus === 'function') {
+        lastFocused.focus();
+      } else if (document.activeElement && modal.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
       modal.classList.remove('is-open');
       modal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
-      if (lastFocused && typeof lastFocused.focus === 'function') {
-        lastFocused.focus();
-      }
     }
 
     triggers.forEach((trigger) => {
@@ -515,6 +517,9 @@
       }
 
       function closeNoteModal() {
+        if (document.activeElement && noteModal.contains(document.activeElement)) {
+          openModalBtn.focus();
+        }
         noteModal.classList.remove('is-open');
         noteModal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
